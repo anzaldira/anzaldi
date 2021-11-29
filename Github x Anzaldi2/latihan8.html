@@ -1,0 +1,50 @@
+[08.25, 24/11/2021] All: <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    var nama = prompt('Masukan Nama Anda : ');
+    document.write(" Nama : " + nama + "</br>")
+    var nis = prompt('Masukan NIS Anda : ');
+    document.write(" NIS : " + nis + "</br>")
+</script>
+<script>
+    function proses(){
+        var a;
+        a = parseInt(document.getElementById("nilai1").value);
+        var b;
+        b = parseInt(document.getElementById("nilai2").value);
+        var c;
+        c = parseInt(document.getElementById("nilai3").value);
+        var hasil;
+        var avg;
+
+        hasil = a + b + c
+        avg = hasil / 3   
+
+        document.write('Nama:' + nama + "</br>")  
+        document.write('Nis:' + nis + "</br>")
+        document.write('Nilai Rata Rata Anda:' + avg + "</br>")
+        
+    }
+    function reset(){
+        document.getElementById("lbldetik").value = "";
+        document.getElementById("result").innerHTML = "Masukan Kembali";
+    }
+</script>
+<h1>Hitung Nilai Rata Rata :</h1>
+
+<input id="nilai1" type="number" placeholder="Masukan Nilai UTS">
+<br>
+<input id="nilai2" type="number" placeholder="Masukan Nilai Tugas">
+<br>
+<input id="nilai3" type="number" placeholder="Masukan Nilai UAS">
+<input type="button" value="Hitung" onclick="proses()">
+<input type="butron" value="Reset" onclick="reset()">
+
+</body>
+</html>
